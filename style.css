@@ -1,0 +1,251 @@
+/*
+Theme Name: Référencime
+Theme URI: https://referencime.fr/
+Description: Twenty Twenty Child Theme
+Author: Thomas Viennet
+Author URL: https://referencime.fr/consultant-seo-freelance/
+Template: twentytwenty
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URL: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+h1 {
+  font-size: 2em !important;
+}
+
+h2 {
+  font-size: 1.7em !important;
+}
+
+h3 {
+  font-size: 1.5em !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500 !important;
+}
+
+/* Start Contact Form 7 */
+.wp-block-contact-form-7-contact-form-selector {
+  background-color: #0A2463;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background-color: #CD2753;
+  color: white;
+  border-radius: 20px;
+}
+
+.wpcf7-spinner {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Forms */
+input[type=checkbox] {
+  position: relative;
+  border: solid #0A2463 !important;
+  border-radius: 2px !important;
+  margin: 0 1em 0 0 !important;
+  padding: 0 !important;
+  vertical-align: inherit !important;
+  opacity: .5;
+}
+
+input[type=checkbox]:hover {
+  opacity: 1;
+}
+
+input[type=checkbox]:checked {
+  opacity: 1;
+}
+
+/* .privacy-policy {
+  color: black !important;
+} */
+
+/* Customises */
+.no-margin-top {
+  margin-top: 0px !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0px !important;
+}
+
+@media (max-width: 768px) {
+  .img-width-50-align-center img {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-padding-left {
+  padding-left: 0px !important;
+}
+
+.padding {
+  padding: 1em;
+}
+
+.kk-star-ratings {
+  display: none;
+}
+
+.primary-menu>li>a {
+  color: white !important;
+}
+
+/* Plugin customisation  */
+
+.custom-btn,
+.cmplz-accept {
+  width: auto;
+  height: auto;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
+  background: #cd2753;
+  background: linear-gradient(0deg, #cd2753 0%, #cd2753 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.btn-11:hover,
+.cmplz-accept:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-11:before,
+.cmplz-accept:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.btn-11:hover,
+.cmplz-accept:hover {
+  opacity: .7;
+}
+
+.btn-11:active,
+.cmplz-accept:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+/* START WAVE*/
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.contentOld {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+/*END WAVE*/

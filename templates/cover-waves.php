@@ -1,0 +1,36 @@
+<?php
+/**
+ * Template Name: Cover Waves
+ * Template Post Type: post, page
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty
+ * @since Twenty Twenty 1.0
+ */
+
+get_header();
+?>
+
+<main id="site-content">
+
+	<?php
+
+	if ( have_posts() ) {
+
+		while ( have_posts() ) {
+			the_post();
+		
+			// var_dump(get_template_directory_uri());
+
+			get_template_part( 'template-parts/content-cover' );
+		}
+	}
+
+	?>
+
+</main><!-- #site-content -->
+
+<?php // get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+
+<?php
+get_footer();
