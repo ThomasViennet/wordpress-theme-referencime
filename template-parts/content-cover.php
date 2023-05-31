@@ -47,8 +47,8 @@
 
 	<div class="cover-header <?php echo $cover_header_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output 
 								?>" <?php echo $cover_header_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
-																																						?>>
-		<div class="cover-header-inner-wrapper screen-height">
+									?>>
+		<div class="cover-header-inner-wrapper <?= !is_page_template('templates/template-waves.php') ? 'screen-height' : ''; ?>">
 			<div class="cover-header-inner">
 				<div class="cover-color-overlay color-accent<?php echo esc_attr($color_overlay_classes); ?>" <?php echo $color_overlay_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
 																												?>></div>
@@ -87,7 +87,7 @@
 
 						the_title('<h1 class="entry-title">', '</h1>');
 
-						if (is_page()) {
+						if (is_page() && !is_page_template('templates/template-waves.php')) {
 						?>
 
 							<div class="to-the-content-wrapper">
@@ -133,17 +133,25 @@
 				</header><!-- .entry-header -->
 
 			</div><!-- .cover-header-inner -->
-			<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-			<defs>
-				<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-			</defs>
-			<g class="parallax">
-				<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"></use>
-				<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
-				<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
-				<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
-			</g>
-		</svg>
+			<?php
+
+			?>
+			<?php
+			if (is_page_template('templates/template-waves.php')) {
+				echo
+				'<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"></use>
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+					</g>
+				</svg>';
+			}
+			?>
 		</div><!-- .cover-header-inner-wrapper -->
 
 	</div><!-- .cover-header -->
