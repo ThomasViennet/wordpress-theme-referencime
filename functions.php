@@ -1,5 +1,5 @@
 <?php
-/* enqueue scripts and style from parent theme */
+// enqueue scripts and style from parent theme
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles()
 {
@@ -8,6 +8,13 @@ function theme_enqueue_styles()
 	wp_enqueue_script('yoast-faq', get_stylesheet_directory_uri() . '/assets/js/yoast/yoast-faq.js', ['jquery'], filemtime(get_stylesheet_directory() . '/assets/js/yoast/yoast-faq.js'));
 }
 
-// function theme_enqueue_js() {
-// 	wp_enqueue_script('fcp-yft', get_template_directory_uri() . '/assets/js/yoast/yoast-faq.js', ['jquery'], filemtime(get_stylesheet_directory()) . '/assets/js/yoast/yoast-faq.js');
-// }
+// add classes to body
+add_filter('body_class', 'overlay_header');
+function overlay_header($classes)
+{
+	// Check whether the current page should have an overlay header.
+	if (is_page_template(array('templates/template-waves.php'))) {
+		$classes[] = 'overlay-header';
+	}
+	return $classes;
+}

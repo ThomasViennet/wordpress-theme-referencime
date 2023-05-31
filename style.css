@@ -10,46 +10,33 @@ License: GNU General Public License v2 or later
 License URL: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
 
-h1 {
-  font-size: 2em !important;
-}
+	CSS Reset
+  Custom styles
+  Plugin: Contact form 7
+  Plugin: kk star
+	Template: Waves Template
 
-h2 {
-  font-size: 1.7em !important;
-}
+----------------------------------------------------------------------------- */
 
-h3 {
-  font-size: 1.5em !important;
-}
+/* -------------------------------------------------------------------------- */
+/*	CSS Reset
+/* -------------------------------------------------------------------------- */
 
 h1,
 h2,
 h3,
-h4 {
-  font-weight: 500 !important;
+h4,
+h5,
+h6 {
+  font-weight: normal;
 }
 
-/* Start Contact Form 7 */
-.wp-block-contact-form-7-contact-form-selector {
-  background-color: #0A2463;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-}
+/* Form ------------------------------------ */
 
-.wpcf7-form-control.has-spinner.wpcf7-submit {
-  background-color: #CD2753;
-  color: white;
-  border-radius: 20px;
-}
-
-.wpcf7-spinner {
-  display: block;
-  margin-top: 10px;
-}
-
-/* Forms */
 input[type=checkbox] {
   position: relative;
   border: solid #0A2463 !important;
@@ -68,11 +55,10 @@ input[type=checkbox]:checked {
   opacity: 1;
 }
 
-/* .privacy-policy {
-  color: black !important;
-} */
+/* -------------------------------------------------------------------------- */
+/*	Custom styles (Occasionally useful)
+/* -------------------------------------------------------------------------- */
 
-/* Customises */
 .no-margin-top {
   margin-top: 0px !important;
 }
@@ -100,15 +86,7 @@ input[type=checkbox]:checked {
   padding: 1em;
 }
 
-.kk-star-ratings {
-  display: none;
-}
-
-.primary-menu>li>a {
-  color: white !important;
-}
-
-/* Plugin customisation  */
+/* button with animation ------------------------------------ */
 
 .custom-btn,
 .cmplz-accept {
@@ -161,7 +139,6 @@ input[type=checkbox]:checked {
     inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
 
-
 @-webkit-keyframes shiny-btn1 {
   0% {
     -webkit-transform: scale(0) rotate(45deg);
@@ -184,8 +161,103 @@ input[type=checkbox]:checked {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*	Plugin: Contact form 7
+/* -------------------------------------------------------------------------- */
 
-/* START WAVE*/
+.wp-block-contact-form-7-contact-form-selector {
+  background-color: #0A2463;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background-color: #CD2753;
+  color: white;
+  border-radius: 20px;
+}
+
+.wpcf7-spinner {
+  display: block;
+  margin-top: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	Plugin: kk star
+/* -------------------------------------------------------------------------- */
+
+.kk-star-ratings {
+  display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	Template: Waves Template
+/* -------------------------------------------------------------------------- */
+
+.waves-header {
+  display: flex;
+  overflow: hidden;
+}
+
+.waves-header-inner-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.waves-header-inner {
+  padding: 10rem 0 5rem 0;
+  width: 100%;
+}
+
+.waves-color-overlay,
+.waves-color-overlay::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.waves-color-overlay::before {
+  background: currentColor;
+  content: "";
+  display: block;
+}
+
+.waves-header .entry-header {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.waves-header .entry-header * {
+  color: #fff;
+}
+
+body.template-waves .entry-header {
+  background: transparent;
+  padding: 0;
+}
+
+.waves-header h1,
+.waves-header h2,
+.waves-header h3,
+.waves-header h4,
+.waves-header h5,
+.waves-header h6,
+.waves-header .faux-heading {
+  color: inherit;
+}
+
+.waves-header .entry-header a {
+  color: inherit;
+}
+
+/* Animations ------------------------------------ */
 
 .waves {
   position: relative;
@@ -247,5 +319,3 @@ input[type=checkbox]:checked {
     min-height: 40px;
   }
 }
-
-/*END WAVE*/
