@@ -1,2 +1,2 @@
-# wordpress-template-referencime
+# wordpress-theme-referencime
 Twenty Twenty Child Theme
