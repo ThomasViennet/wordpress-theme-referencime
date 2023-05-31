@@ -18,6 +18,7 @@ License URL: https://www.gnu.org/licenses/gpl-2.0.html
   Custom styles
   Plugin: Contact form 7
   Plugin: kk star
+  Plugin: Yoast
 	Template: Waves Template
 
 ----------------------------------------------------------------------------- */
@@ -26,6 +27,12 @@ License URL: https://www.gnu.org/licenses/gpl-2.0.html
 /*	CSS Reset
 /* -------------------------------------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body * {
+   font-family: 'Roboto', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -33,6 +40,11 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+  color : #313332;
+}
+
+p {
+  color: #313332;
 }
 
 /* Form ------------------------------------ */
@@ -59,6 +71,7 @@ input[type=checkbox]:checked {
 /*	Custom styles (Occasionally useful)
 /* -------------------------------------------------------------------------- */
 
+
 .no-margin-top {
   margin-top: 0px !important;
 }
@@ -67,23 +80,34 @@ input[type=checkbox]:checked {
   margin-bottom: 0px !important;
 }
 
-@media (max-width: 768px) {
-  .img-width-50-align-center img {
-    width: 50%;
-    margin: auto;
-  }
-}
-
-.box-shadow {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
 .no-padding-left {
   padding-left: 0px !important;
 }
 
 .padding {
   padding: 1em;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* img ------------------------------------ */
+
+.hover-effect img {
+  transition: all 0.33s ease-in-out;
+  transform: scale(1) translateY(0px);
+}
+.hover-effect img:hover {
+  transition: all 0.33s ease-in-out;
+  transform: scale(1.05) translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .img-width-50-align-center img {
+    width: 50%;
+    margin: auto;
+  }
 }
 
 /* button with animation ------------------------------------ */
@@ -189,6 +213,88 @@ input[type=checkbox]:checked {
 
 .kk-star-ratings {
   display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	Plugin: Yoast
+/* -------------------------------------------------------------------------- */
+
+/* colors & borders */
+.wp-block-yoast-faq-block {
+    border-top:1px solid #eee;
+}
+.wp-block-yoast-faq-block .schema-faq-question {
+    border-bottom:1px solid #eee;
+}
+.wp-block-yoast-faq-block .schema-faq-question:hover,
+.wp-block-yoast-faq-block .fcp-opened .schema-faq-question {
+    background-color:#fafafa;
+}
+.wp-block-yoast-faq-block .schema-faq-answer,
+.wp-block-yoast-faq-block .fcp-opened .schema-faq-answer {
+    border-bottom:1px solid #eee;
+}
+
+/* layout */
+.wp-block-yoast-faq-block .schema-faq-question {
+    display:block;
+    padding:10px;
+    position:relative;
+}
+.wp-block-yoast-faq-block.fcp-faq .schema-faq-question {
+    cursor:pointer;
+}
+.wp-block-yoast-faq-block .schema-faq-answer {
+    margin:0;
+    padding:12px 10px;
+}
+
+/* bullet before a question */
+.wp-block-yoast-faq-block .schema-faq-question:before {
+    /* position gap */
+    margin-top:-2px;
+}
+.wp-block-yoast-faq-block .schema-faq-question,
+.wp-block-yoast-faq-block .schema-faq-answer {
+    padding-left:34px;
+}
+.wp-block-yoast-faq-block .schema-faq-question:before {
+    content:'';
+    display:block;
+    border:2px solid #da6284;
+    border-width:0px 2px 2px 0px;
+    width:9px;
+    height:9px;
+    box-sizing:border-box;
+    position:absolute;
+    left:14px;
+}
+.wp-block-yoast-faq-block.fcp-faq .schema-faq-question:before {
+    top:23px;
+    transform:rotate(-45deg);
+    transition:all 0.3s 0.3s ease;
+}
+.wp-block-yoast-faq-block .schema-faq-question:before,
+.wp-block-yoast-faq-block.fcp-faq .fcp-opened .schema-faq-question:before {
+    top:23px;
+    transform:rotate(45deg);
+}
+
+/* transition */
+.wp-block-yoast-faq-block.fcp-faq .schema-faq-answer {
+    max-height:0;
+    overflow:hidden;
+    border-bottom-width:0;
+    padding-top:0;
+    padding-bottom:0;
+    transition:padding-bottom 0.3s ease-in, max-height 0.4s ease-in, padding-top 0.1s 0.4s ease-out, border-bottom-width 0s 0.5s linear;
+}
+.wp-block-yoast-faq-block .fcp-opened .schema-faq-answer {
+    max-height:9999px;
+    border-bottom-width:1px;
+    padding-top:12px;
+    padding-bottom:20px;
+    transition:padding-top 0.2s ease-in, max-height 0.3s 0.2s linear, padding-bottom 0.4s 0.2s ease;
 }
 
 /* -------------------------------------------------------------------------- */
