@@ -15,6 +15,9 @@ License URL: https://www.gnu.org/licenses/gpl-2.0.html
 ----------------------------------------------------------------
 
 	CSS Reset
+    General
+    Navigation
+    Form
   Custom styles
   Plugin: Contact form 7
   Plugin: kk star
@@ -45,6 +48,34 @@ h6 {
 
 p {
   color: #313332;
+}
+
+/* .overlay-header #site-header {
+  position: fixed;
+} */
+
+/* Navigation ------------------------------------ */
+
+#site-header,
+.header-inner,
+.site-logo {
+  transition: all 0.5s;
+}
+
+#site-header {
+  position: fixed !important;
+}
+
+#site-header.afterScroll {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.header-inner.afterScroll {
+  padding: 0.7em 0;
+}
+
+.site-logo.afterScroll {
+  width: 70%;
 }
 
 /* Form ------------------------------------ */
