@@ -45,9 +45,9 @@
 	$color_overlay_classes .= ' opacity-' . $color_overlay_opacity;
 	?>
 
-	<div class="cover-header <?php echo $cover_header_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output 
-								?>" <?php echo $cover_header_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
-									?>>
+	<div id="cover" class="cover-header <?php echo $cover_header_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output 
+										?>" <?php echo $cover_header_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
+											?>>
 		<div class="cover-header-inner-wrapper <?= !is_page_template('templates/template-waves.php') ? 'screen-height' : ''; ?>">
 			<div class="cover-header-inner">
 				<div class="cover-color-overlay color-accent<?php echo esc_attr($color_overlay_classes); ?>" <?php echo $color_overlay_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
@@ -157,6 +157,13 @@
 	</div><!-- .cover-header -->
 
 	<div class="post-inner" id="post-inner">
+		<?php
+		if (is_page_template(array('templates/template-netlinking.php'))) {
+			echo
+			'<script src="https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js"></script>
+				<script src="http://localhost:8888/referencime.fr/wp-content/themes/referencime/assets/js/netlinking.js?ver=1685705602"></script>';
+		}
+		?>
 
 		<div class="entry-content">
 
