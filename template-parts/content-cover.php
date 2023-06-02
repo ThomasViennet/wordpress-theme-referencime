@@ -48,7 +48,31 @@
 	<div id="cover" class="cover-header <?php echo $cover_header_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output 
 										?>" <?php echo $cover_header_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
 											?>>
-		<div class="cover-header-inner-wrapper <?= !is_page_template('templates/template-waves.php') ? 'screen-height' : ''; ?>">
+
+		<?php if (is_page_template(array('templates/template-netlinking.php'))) {
+			echo '
+		<div id="particle-canvas"></div>
+		<script type="text/javascript" src="http://localhost:8888/referencime.fr/wp-content/themes/referencime/assets/js/netlinking.js"></script>
+		<script type="text/javascript">
+			var canvasDiv = document.getElementById(\'particle-canvas\');
+			var options = {
+				particleColor: \'#888\',
+				background: \'img/demo-bg.jpg\',
+				interactive: true,
+				speed: \'slow\',
+				density: \'high\'
+			};
+			var particleCanvas = new ParticleNetwork(canvasDiv, options);
+		</script>';
+		} ?>
+		<?php
+		// if (is_page_template(array('templates/template-netlinking.php'))) {
+		// 	echo
+		// 	'<script src="https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js"></script>
+		// 		<script src="http://localhost:8888/referencime.fr/wp-content/themes/referencime/assets/js/netlinking.js?ver=1685705602"></script>';
+		// }
+		?>
+		<div class="cover-header-inner-wrapper <?= !is_page_template(array('templates/template-waves.php', 'templates/template-netlinking.php')) ? 'screen-height' : ''; ?>">
 			<div class="cover-header-inner">
 				<div class="cover-color-overlay color-accent<?php echo esc_attr($color_overlay_classes); ?>" <?php echo $color_overlay_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
 																												?>></div>
@@ -87,7 +111,7 @@
 
 						the_title('<h1 class="entry-title">', '</h1>');
 
-						if (is_page() && !is_page_template('templates/template-waves.php')) {
+						if (is_page() && !is_page_template(array('templates/template-waves.php', 'templates/template-netlinking.php'))) {
 						?>
 
 							<div class="to-the-content-wrapper">
@@ -137,7 +161,7 @@
 
 			?>
 			<?php
-			if (is_page_template(array('templates/template-waves.php', 'templates/template-cover.php'))) {
+			if (is_page_template(array('templates/template-waves.php', 'templates/template-cover.php', 'templates/template-netlinking.php'))) {
 				echo
 				'<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 					<defs>
@@ -158,13 +182,21 @@
 
 	<div class="post-inner" id="post-inner">
 		<?php
-		if (is_page_template(array('templates/template-netlinking.php'))) {
+		if (is_page_template(array('templates/template-waves.php', 'templates/template-cover.php', 'templates/template-netlinking.php'))) {
 			echo
-			'<script src="https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js"></script>
-				<script src="http://localhost:8888/referencime.fr/wp-content/themes/referencime/assets/js/netlinking.js?ver=1685705602"></script>';
+			'<svg class="waves-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" transform="scale(1, -1) translate(0, -100)">
+				<defs>
+					<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" ></path>
+				</defs>
+				<g class="parallax">
+					<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"></use>
+					<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
+					<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+					<use xlink:href="#gentle-wave" x="48" y="7" fill="white"></use>
+				</g>
+			</svg>';
 		}
 		?>
-
 		<div class="entry-content">
 
 			<?php

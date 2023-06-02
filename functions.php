@@ -18,7 +18,7 @@ add_filter('body_class', 'overlay_header');
 function overlay_header($classes)
 {
 	// Check whether the current page should have an overlay header.
-	if (is_page_template('templates/template-waves.php')) {
+	if (is_page_template(array('templates/template-waves.php', 'templates/template-netlinking.php'))) {
 		$classes[] = 'overlay-header';
 	}
 	return $classes;
