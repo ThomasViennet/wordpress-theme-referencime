@@ -64,6 +64,8 @@ p {
 
 #site-header {
   position: fixed !important;
+  width: 100%;
+  background: 0 0;
 }
 
 #site-header.afterScroll {
