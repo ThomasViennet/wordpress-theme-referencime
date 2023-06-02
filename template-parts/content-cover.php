@@ -182,7 +182,7 @@
 
 	<div class="post-inner" id="post-inner">
 		<?php
-		if (is_page_template(array('templates/template-waves.php', 'templates/template-cover.php', 'templates/template-netlinking.php'))) {
+		if (is_page_template(array('templates/template-netlinking.php'))) {
 			echo
 			'<svg class="waves-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" transform="scale(1, -1) translate(0, -100)">
 				<defs>

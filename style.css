@@ -509,7 +509,7 @@ body.template-waves .entry-header {
   margin: auto;
   z-index: 3;
   position: relative;
-  padding: 70px;
+  padding: 1em;
   box-shadow: 0em 1em 1em 1em #ffffff
 }
 
