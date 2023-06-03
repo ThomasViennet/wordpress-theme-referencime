@@ -52,7 +52,6 @@
 		<?php if (is_page_template(array('templates/template-netlinking.php'))) {
 			echo '
 		<div id="particle-canvas"></div>
-		<script type="text/javascript" src="https://referencime.fr/wp-content/themes/wordpress-theme-referencime/assets/js/netlinking.js"></script>
 		<script type="text/javascript">
 			var canvasDiv = document.getElementById(\'particle-canvas\');
 			var options = {
