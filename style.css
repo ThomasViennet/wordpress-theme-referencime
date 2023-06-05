@@ -87,6 +87,8 @@ main p {
 
 .footer-copyright {
   font-weight: 500;
+  z-index: 1;
+  position: relative;
 }
 
 /* Navigation ------------------------------------ */
@@ -105,24 +107,33 @@ main p {
 
 #site-header.afterScroll {
   background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) saturate(180%);
 }
 
 .header-inner.afterScroll {
   padding: 0.7em 0;
 }
 
-.site-logo{
+.site-logo {
   width: 100%;
   transition: all 0.5s;
-  margin: auto!important;
+  margin: auto !important;
 }
+
 .site-logo.afterScroll {
   width: 90%;
   transition: all 0.5s;
-  margin: auto!important;
+  margin: auto !important;
 }
 
 /* Form ------------------------------------ */
+
+form {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
 input[type=checkbox] {
   position: relative;
@@ -192,32 +203,7 @@ input[type=checkbox]:checked {
 
 /* button with animation ------------------------------------ */
 
-.custom-btn,
-.cmplz-accept {
-  width: auto;
-  height: auto;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border: none;
-  background: #cd2753;
-  background: linear-gradient(0deg, #cd2753 0%, #cd2753 100%);
-  color: #fff;
-  overflow: hidden;
-}
-
-.btn-11:hover,
-.cmplz-accept:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-.btn-11:before,
+.wp-block-button-important:before,
 .cmplz-accept:before {
   position: absolute;
   content: '';
@@ -227,15 +213,10 @@ input[type=checkbox]:checked {
   width: 30px;
   height: 100%;
   background-color: #fff;
-  animation: shiny-btn1 3s ease-in-out infinite;
+  animation: wp-block-button-important 3s ease-in-out infinite;
 }
 
-.btn-11:hover,
-.cmplz-accept:hover {
-  opacity: .7;
-}
-
-.btn-11:active,
+.wp-block-button-important:active,
 .cmplz-accept:active {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
     -4px -4px 6px 0 rgba(116, 125, 136, .2),
@@ -243,7 +224,7 @@ input[type=checkbox]:checked {
     inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
 
-@-webkit-keyframes shiny-btn1 {
+@-webkit-keyframes wp-block-button-important {
   0% {
     -webkit-transform: scale(0) rotate(45deg);
     opacity: 0;
@@ -268,19 +249,6 @@ input[type=checkbox]:checked {
 /* -------------------------------------------------------------------------- */
 /*	Plugin: Contact form 7
 /* -------------------------------------------------------------------------- */
-
-.wp-block-contact-form-7-contact-form-selector {
-  background-color: #0A2463;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.wpcf7-form-control.has-spinner.wpcf7-submit {
-  background-color: #CD2753;
-  color: white;
-  border-radius: 20px;
-}
 
 .wpcf7-spinner {
   display: block;

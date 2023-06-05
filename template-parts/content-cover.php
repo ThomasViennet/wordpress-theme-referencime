@@ -48,14 +48,7 @@
 	<div id="cover" class="cover-header <?php echo $cover_header_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output 
 										?>" <?php echo $cover_header_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
 											?>>
-		<?php
-		// if (is_page_template(array('templates/template-netlinking.php'))) {
-		// 	echo
-		// 	'<script src="https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js"></script>
-		// 		<script src="http://localhost:8888/referencime.fr/wp-content/themes/referencime/assets/js/netlinking.js?ver=1685705602"></script>';
-		// }
-		?>
-		<div class="cover-header-inner-wrapper <?= !is_page_template(array('templates/template-waves.php', 'templates/template-netlinking.php')) ? 'screen-height' : ''; ?>">
+		<div class="cover-header-inner-wrapper <?= !is_page_template(array('templates/template-waves.php')) ? 'screen-height' : ''; ?>">
 
 			<div class="cover-header-inner">
 				<div class="cover-color-overlay color-accent<?php echo esc_attr($color_overlay_classes); ?>" <?php echo $color_overlay_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
@@ -95,7 +88,7 @@
 
 						the_title('<h1 class="entry-title">', '</h1>');
 
-						if (is_page() && !is_page_template(array('templates/template-waves.php', 'templates/template-netlinking.php'))) {
+						if (is_page() && !is_page_template(array('templates/template-waves.php'))) {
 						?>
 
 							<div class="to-the-content-wrapper">
@@ -145,7 +138,7 @@
 
 			?>
 			<?php
-			if (is_page_template(array('templates/template-waves.php', 'templates/template-cover.php', 'templates/template-netlinking.php'))) {
+			if (is_page_template(array('templates/template-waves.php', 'templates/template-cover.php'))) {
 				echo
 				'<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 					<defs>
