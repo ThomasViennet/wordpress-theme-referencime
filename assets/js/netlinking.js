@@ -131,7 +131,7 @@
       this.canvas.height = this.canvasDiv.size.height;
       this.setStyles(this.canvasDiv, { 'position': 'relative' });
       this.setStyles(this.canvas, {
-        'z-index': '20',
+        'z-index': '0',
         'position': 'absolute',
         'top':'0',
         'bottom':'0'

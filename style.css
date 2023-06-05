@@ -57,6 +57,8 @@ main p {
 
 .footer-copyright {
   font-weight: 500;
+  z-index: 1;
+  position: relative;
 }
 
 /* Navigation ------------------------------------ */
