@@ -217,5 +217,4 @@
 	<?php
 	}
 	?>
-test
 </article><!-- .post -->
