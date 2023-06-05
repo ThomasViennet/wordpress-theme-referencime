@@ -15,7 +15,7 @@
 ?>
 <div id="particle-canvas">
 	<?php
-	if (is_page_template(array('templates/template-waves.php', 'templates/template-cover.php', 'templates/template-netlinking.php'))) {
+	if (is_page_template(array('templates/template-waves.php', 'templates/template-cover.php'))) {
 		echo
 		'<svg class="waves-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" transform="scale(1, -1) translate(0, -100)">
 				<defs>
@@ -60,17 +60,7 @@
 		</div><!-- .section-inner -->
 	</footer><!-- #site-footer -->
 </div>
-<script type="text/javascript" src="http://localhost:8888/referencime.fr/wp-content/themes/referencime/assets/js/netlinking.js"></script>
-<script type="text/javascript">
-	var canvasDiv = document.getElementById('particle-canvas');
-	var options = {
-		particleColor: '#fff',
-		interactive: true,
-		speed: 'slow',
-		density: 'high'
-	};
-	var particleCanvas = new ParticleNetwork(canvasDiv, options);
-</script>
+
 <?php wp_footer(); ?>
 
 </body>
