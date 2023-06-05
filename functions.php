@@ -9,8 +9,8 @@ function theme_enqueue()
 	//JS
 	wp_enqueue_script('yoast-faq', get_stylesheet_directory_uri() . '/assets/js/yoast-faq.js', ['jquery'], filemtime(get_stylesheet_directory() . '/assets/js/yoast-faq.js'));
 	wp_enqueue_script('navigation', get_stylesheet_directory_uri() . '/assets/js/navigation.js', ['jquery'], filemtime(get_stylesheet_directory() . '/assets/js/navigation.js'));
+	wp_enqueue_script('highlight', get_stylesheet_directory_uri() . '/assets/js/highlight.js', ['jquery'], filemtime(get_stylesheet_directory() . '/assets/js/highlight.js'), true);
 	wp_enqueue_script('netlinking', get_stylesheet_directory_uri() . '/assets/js/netlinking.js', ['jquery'], filemtime(get_stylesheet_directory() . '/assets/js/netlinking.js'), true);
-	
 }
 
 // add classes to body

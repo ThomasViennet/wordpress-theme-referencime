@@ -37,8 +37,8 @@
 		<div class="section-inner">
 			<div class="footer-credits">
 
-				<p class="footer-copyright">
-					Contacts 👋<br>
+				<p id="highlight-effect" class="footer-copyright">
+				<span class="highlight"> Contacts 👋 </span><br>
 					<a href="tel:+33618669749">06 18 66 97 49</a><br>
 					<a href="mailto:contact@referencime.fr">contact@referencime.fr</a><br>
 					<a href="https://referencime.fr/consultant-seo-marseille-pour-votre-referencement-naturel/">Consultant SEO à Marseille</a><br>

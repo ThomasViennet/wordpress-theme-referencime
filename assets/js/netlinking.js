@@ -276,7 +276,6 @@
   
   }));
   
-  
 		var canvasDiv = document.getElementById('site-footer');
 		var options = {
 			particleColor: '#e32657',
