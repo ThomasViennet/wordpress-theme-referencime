@@ -29,7 +29,7 @@ function netlinking_footer()
 	<script type="text/javascript">
 		var canvasDiv = document.getElementById('site-footer');
 		var options = {
-			particleColor: '#fff',
+			particleColor: '#e32657',
 			interactive: true,
 			speed: 'slow',
 			density: 'high'
