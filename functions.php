@@ -22,3 +22,20 @@ function overlay_header($classes)
 	}
 	return $classes;
 }
+
+function netlinking_footer()
+{
+?>
+	<script type="text/javascript">
+		var canvasDiv = document.getElementById('site-footer');
+		var options = {
+			particleColor: '#fff',
+			interactive: true,
+			speed: 'slow',
+			density: 'high'
+		};
+		var particleCanvas = new ParticleNetwork(canvasDiv, options);
+	</script>
+<?php
+}
+add_action('wp_footer', 'netlinking_footer');
