@@ -71,93 +71,87 @@
       'width': this.canvasDiv.offsetWidth,
       'height': this.canvasDiv.offsetHeight
     };
-
-    // Set options
-    options = options !== undefined ? options : {};
-    this.options = {
-      particleColor: (options.particleColor !== undefined) ? options.particleColor : '#fff',
-      background: (options.background !== undefined) ? options.background : '#1a252f',
-      interactive: (options.interactive !== undefined) ? options.interactive : true,
-      velocity: this.setVelocity(options.speed),
-      density: this.setDensity(options.density)
+  
+    // Create ParticleNetwork class
+    ParticleNetwork = function (canvas, options) {
+  
+      this.canvasDiv = canvas;
+      this.canvasDiv.size = {
+        'width': this.canvasDiv.offsetWidth,
+        'height': this.canvasDiv.offsetHeight
+      };
+  
+      // Set options
+      options = options !== undefined ? options : {};
+      this.options = {
+        particleColor: (options.particleColor !== undefined) ? options.particleColor : '#fff',
+        background: (options.background !== undefined) ? options.background : '#000',
+        interactive: (options.interactive !== undefined) ? options.interactive : true,
+        velocity: this.setVelocity(options.speed),
+        density: this.setDensity(options.density)
+      };
+  
+      this.init();
     };
-
-    this.init();
-  };
-  ParticleNetwork.prototype.init = function () {
-
-    // Create background div
-    this.bgDiv = document.createElement('div');
-    this.canvasDiv.appendChild(this.bgDiv);
-    this.setStyles(this.bgDiv, {
-      'position': 'absolute',
-      'top': 0,
-      'left': 0,
-      'bottom': 0,
-      'right': 0,
-      'z-index': 1
-    });
-
-    // Check if valid background hex color
-    if ((/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.background)) {
-      this.setStyles(this.bgDiv, {
-        'background': this.options.background
+    ParticleNetwork.prototype.init = function () {
+  
+      // Create background div
+      // this.bgDiv = document.createElement('div');
+      // this.canvasDiv.appendChild(this.bgDiv);
+      // this.setStyles(this.bgDiv, {
+      //   'position': 'absolute',
+      //   'top': 0,
+      //   'left': 0,
+      //   'bottom': 0,
+      //   'right': 0,
+      //   'z-index': 1
+      // });
+  
+      // // Check if valid background hex color
+      // if ((/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.background)) {
+      //   this.setStyles(this.bgDiv, {
+      //     'background': this.options.background
+      //   });
+      // }
+      // // Else check if valid image
+      // else if ((/\.(gif|jpg|jpeg|tiff|png)$/i).test(this.options.background)) {
+      //   this.setStyles(this.bgDiv, {
+      //     'background': 'url("' + this.options.background + '") no-repeat center',
+      //     'background-size': 'cover'
+      //   });
+      // }
+      // // Else throw error
+      // else {
+      //   console.error('Please specify a valid background image or hexadecimal color');
+      //   return false;
+      // }
+  
+      // // Check if valid particleColor
+      // if (!(/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.particleColor)) {
+      //   console.error('Please specify a valid particleColor hexadecimal color');
+      //   return false;
+      // }
+  
+      // Create canvas & context
+      this.canvas = document.createElement('canvas');
+      this.canvasDiv.appendChild(this.canvas);
+      this.ctx = this.canvas.getContext('2d');
+      this.canvas.width = this.canvasDiv.size.width;
+      this.canvas.height = this.canvasDiv.size.height;
+      this.setStyles(this.canvasDiv, { 'position': 'relative' });
+      this.setStyles(this.canvas, {
+        'z-index': '20',
+        'position': 'absolute',
+        'top':'0',
+        'bottom':'0'
       });
-    }
-    // Else check if valid image
-    else if ((/\.(gif|jpg|jpeg|tiff|png)$/i).test(this.options.background)) {
-      this.setStyles(this.bgDiv, {
-        'background': 'url("' + this.options.background + '") no-repeat center',
-        'background-size': 'cover'
-      });
-    }
-    // Else throw error
-    else {
-      console.error('Please specify a valid background image or hexadecimal color');
-      return false;
-    }
-
-    // Check if valid particleColor
-    if (!(/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.particleColor)) {
-      console.error('Please specify a valid particleColor hexadecimal color');
-      return false;
-    }
-
-    // Create canvas & context
-    this.canvas = document.createElement('canvas');
-    this.canvasDiv.appendChild(this.canvas);
-    this.ctx = this.canvas.getContext('2d');
-    this.canvas.width = this.canvasDiv.size.width;
-    this.canvas.height = this.canvasDiv.size.height;
-    this.setStyles(this.canvasDiv, { 'position': 'relative' });
-    this.setStyles(this.canvas, {
-      'z-index': '20',
-      'position': 'relative'
-    });
-
-    // Add resize listener to canvas
-    window.addEventListener('resize', function () {
-
-      // Check if div has changed size
-      if (this.canvasDiv.offsetWidth === this.canvasDiv.size.width && this.canvasDiv.offsetHeight === this.canvasDiv.size.height) {
-        return false;
-      }
-
-      // Scale canvas
-      this.canvas.width = this.canvasDiv.size.width = this.canvasDiv.offsetWidth;
-      this.canvas.height = this.canvasDiv.size.height = this.canvasDiv.offsetHeight;
-
-      // Set timeout to wait until end of resize event
-      clearTimeout(this.resetTimer);
-      this.resetTimer = setTimeout(function () {
-
-        // Reset particles
-        this.particles = [];
-        for (var i = 0; i < this.canvas.width * this.canvas.height / this.options.density; i++) {
-          this.particles.push(new Particle(this));
-        }
-        if (this.options.interactive) {
-          this.particles.push(this.mouseParticle);
+  
+      // Add resize listener to canvas
+      window.addEventListener('resize', function () {
+  
+        // Check if div has changed size
+        if (this.canvasDiv.offsetWidth === this.canvasDiv.size.width && this.canvasDiv.offsetHeight === this.canvasDiv.size.height) {
+          return false;
         }
 
         // Update canvas
