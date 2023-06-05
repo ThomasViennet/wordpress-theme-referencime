@@ -27,7 +27,7 @@ function netlinking_footer()
 {
 ?>
 	<script type="text/javascript">
-		var canvasDiv = document.getElementById('particle-canvas');
+		var canvasDiv = document.getElementById('site-footer');
 		var options = {
 			particleColor: '#fff',
 			interactive: true,
