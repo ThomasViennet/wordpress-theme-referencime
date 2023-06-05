@@ -76,7 +76,7 @@
       options = options !== undefined ? options : {};
       this.options = {
         particleColor: (options.particleColor !== undefined) ? options.particleColor : '#fff',
-        background: (options.background !== undefined) ? options.background : '#1a252f',
+        background: (options.background !== undefined) ? options.background : '#000',
         interactive: (options.interactive !== undefined) ? options.interactive : true,
         velocity: this.setVelocity(options.speed),
         density: this.setDensity(options.density)
@@ -87,41 +87,41 @@
     ParticleNetwork.prototype.init = function () {
   
       // Create background div
-      this.bgDiv = document.createElement('div');
-      this.canvasDiv.appendChild(this.bgDiv);
-      this.setStyles(this.bgDiv, {
-        'position': 'absolute',
-        'top': 0,
-        'left': 0,
-        'bottom': 0,
-        'right': 0,
-        'z-index': 1
-      });
+      // this.bgDiv = document.createElement('div');
+      // this.canvasDiv.appendChild(this.bgDiv);
+      // this.setStyles(this.bgDiv, {
+      //   'position': 'absolute',
+      //   'top': 0,
+      //   'left': 0,
+      //   'bottom': 0,
+      //   'right': 0,
+      //   'z-index': 1
+      // });
   
-      // Check if valid background hex color
-      if ((/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.background)) {
-        this.setStyles(this.bgDiv, {
-          'background': this.options.background
-        });
-      }
-      // Else check if valid image
-      else if ((/\.(gif|jpg|jpeg|tiff|png)$/i).test(this.options.background)) {
-        this.setStyles(this.bgDiv, {
-          'background': 'url("' + this.options.background + '") no-repeat center',
-          'background-size': 'cover'
-        });
-      }
-      // Else throw error
-      else {
-        console.error('Please specify a valid background image or hexadecimal color');
-        return false;
-      }
+      // // Check if valid background hex color
+      // if ((/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.background)) {
+      //   this.setStyles(this.bgDiv, {
+      //     'background': this.options.background
+      //   });
+      // }
+      // // Else check if valid image
+      // else if ((/\.(gif|jpg|jpeg|tiff|png)$/i).test(this.options.background)) {
+      //   this.setStyles(this.bgDiv, {
+      //     'background': 'url("' + this.options.background + '") no-repeat center',
+      //     'background-size': 'cover'
+      //   });
+      // }
+      // // Else throw error
+      // else {
+      //   console.error('Please specify a valid background image or hexadecimal color');
+      //   return false;
+      // }
   
-      // Check if valid particleColor
-      if (!(/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.particleColor)) {
-        console.error('Please specify a valid particleColor hexadecimal color');
-        return false;
-      }
+      // // Check if valid particleColor
+      // if (!(/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.particleColor)) {
+      //   console.error('Please specify a valid particleColor hexadecimal color');
+      //   return false;
+      // }
   
       // Create canvas & context
       this.canvas = document.createElement('canvas');
@@ -132,7 +132,9 @@
       this.setStyles(this.canvasDiv, { 'position': 'relative' });
       this.setStyles(this.canvas, {
         'z-index': '20',
-        'position': 'relative'
+        'position': 'absolute',
+        'top':'0',
+        'bottom':'0'
       });
   
       // Add resize listener to canvas

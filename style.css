@@ -47,12 +47,16 @@ h6 {
   color: #313332;
 }
 
-p {
+main p {
   color: #313332;
 }
 
 .overlay-header #site-header {
  z-index: 4;
+}
+
+.footer-copyright {
+  font-weight: 500;
 }
 
 /* Navigation ------------------------------------ */
@@ -487,8 +491,9 @@ body.template-waves .entry-header {
 
 #particle-canvas {
   width: 100%;
-  height: 1000px;
-  position: fixed !important;
+  height: 100%;
+  /* position: absolute;
+  top:0; */
   z-index: 1;
 }
 

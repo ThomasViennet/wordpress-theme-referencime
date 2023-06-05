@@ -48,23 +48,6 @@
 	<div id="cover" class="cover-header <?php echo $cover_header_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output 
 										?>" <?php echo $cover_header_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
 											?>>
-
-		<?php if (is_page_template(array('templates/template-netlinking.php'))) {
-			echo '
-		<div id="particle-canvas"></div>
-		<script type="text/javascript" src="http://localhost:8888/referencime.fr/wp-content/themes/referencime/assets/js/netlinking.js"></script>
-		<script type="text/javascript">
-			var canvasDiv = document.getElementById(\'particle-canvas\');
-			var options = {
-				particleColor: \'#888\',
-				background: \'img/demo-bg.jpg\',
-				interactive: true,
-				speed: \'slow\',
-				density: \'high\'
-			};
-			var particleCanvas = new ParticleNetwork(canvasDiv, options);
-		</script>';
-		} ?>
 		<?php
 		// if (is_page_template(array('templates/template-netlinking.php'))) {
 		// 	echo
@@ -73,6 +56,7 @@
 		// }
 		?>
 		<div class="cover-header-inner-wrapper <?= !is_page_template(array('templates/template-waves.php', 'templates/template-netlinking.php')) ? 'screen-height' : ''; ?>">
+
 			<div class="cover-header-inner">
 				<div class="cover-color-overlay color-accent<?php echo esc_attr($color_overlay_classes); ?>" <?php echo $color_overlay_style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) 
 																												?>></div>
