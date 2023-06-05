@@ -276,3 +276,13 @@
   
   }));
   
+  
+		var canvasDiv = document.getElementById('site-footer');
+		var options = {
+			particleColor: '#e32657',
+			interactive: true,
+			speed: 'slow',
+			density: 'high'
+		};
+		var particleCanvas = new ParticleNetwork(canvasDiv, options);
+	
