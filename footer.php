@@ -36,7 +36,6 @@
 	?>
 		<div class="section-inner">
 			<div class="footer-credits">
-
 				<p id="highlight-effect" class="footer-copyright">
 				<span class="highlight"> Contacts 👋 </span><br>
 					<a href="tel:+33618669749">06 18 66 97 49</a><br>

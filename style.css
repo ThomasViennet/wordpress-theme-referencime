@@ -91,18 +91,26 @@ main p {
   position: relative;
 }
 
+.search-modal.active {
+  backdrop-filter: blur(10px) saturate(180%);
+  transition: 0.2s linear;
+}
+
+
 /* Navigation ------------------------------------ */
 
 #site-header,
 .header-inner,
-.site-logo {
-  transition: all 1s ease-in-out;
+.site-logo,
+.waves-nav {
+  transition: all 0.3s;
 }
 
 #site-header {
   position: fixed !important;
   width: 100% !important;
-  background: 0 0;
+  /* background: 0 0;
+  background-color: rgba(0, 0, 0, 0.8) !important; */
 }
 
 #site-header.afterScroll {
@@ -122,6 +130,31 @@ main p {
 .site-logo.afterScroll {
   width: 90%;
   margin: auto !important;
+}
+
+.waves-nav {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .waves-nav {
+    display: block;
+    width: 100%;
+    height: 1vh;
+    opacity: 0;
+    top: -1vh;
+    position: absolute;
+  }
+
+  .waves-nav.afterScroll {
+    display: block;
+    width: 100%;
+    height: 1vh;
+    opacity: 0.8;
+    top: -1vh;
+    position: absolute;
+    backdrop-filter: blur(10px) saturate(180%);
+  }
 }
 
 /* Form ------------------------------------ */
@@ -246,7 +279,7 @@ input[type=checkbox]:checked {
     inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
 
-@-webkit-keyframes wp-block-button-important {
+@keyframes wp-block-button-important {
   0% {
     -webkit-transform: scale(0) rotate(45deg);
     opacity: 0;
