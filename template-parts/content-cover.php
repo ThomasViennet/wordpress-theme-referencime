@@ -41,7 +41,7 @@
 
 	// Get the opacity of the color overlay.
 	$color_overlay_opacity  = get_theme_mod('cover_template_overlay_opacity');
-	$color_overlay_opacity  = (false === $color_overlay_opacity) ? 80 : $color_overlay_opacity;
+	$color_overlay_opacity  = (false === $color_overlay_opacity) ? 50 : $color_overlay_opacity;
 	$color_overlay_classes .= ' opacity-' . $color_overlay_opacity;
 	?>
 
