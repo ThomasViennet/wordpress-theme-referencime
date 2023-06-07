@@ -122,6 +122,10 @@ main p {
   padding: 0.7em 0;
 }
 
+.header-titles {
+  display: contents;
+}
+
 .site-logo {
   width: 100%;
   margin: auto !important;
