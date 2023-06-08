@@ -131,6 +131,27 @@ main p {
   margin: auto !important;
 }
 
+h1 {
+  animation: 1s app;
+  transition: all 1s;
+}
+
+@keyframes app {
+  from {
+    filter: blur(10rem);
+  }
+
+  to {
+    filter: blur(0rem);
+  }
+}
+
+h1.afterScroll {
+  filter: blur(10rem);
+  transition: all 1s;
+  /* opacity: 0; */
+}
+
 .site-logo.afterScroll {
   width: 50%;
   margin: auto !important;

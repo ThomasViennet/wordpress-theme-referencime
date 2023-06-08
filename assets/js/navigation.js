@@ -5,6 +5,7 @@ jQuery(function () {
 		windowTop > 10 ? jQuery('header#site-header').addClass('afterScroll') : jQuery('header#site-header').removeClass('afterScroll');
 		windowTop > 10 ? jQuery('div.header-inner').addClass('afterScroll') : jQuery('div.header-inner').removeClass('afterScroll');
 		windowTop > 10 ? jQuery('div.site-logo').addClass('afterScroll') : jQuery('div.site-logo').removeClass('afterScroll');
-		windowTop > 10 ? jQuery('.waves-nav').addClass('afterScroll') : jQuery('.waves-nav').removeClass('afterScroll');
+		// windowTop > 10 ? jQuery('.waves-nav').addClass('afterScroll') : jQuery('.waves-nav').removeClass('afterScroll');
+		windowTop > 10 ? jQuery('h1').addClass('afterScroll') : jQuery('h1').removeClass('afterScroll');
 	});
 });
