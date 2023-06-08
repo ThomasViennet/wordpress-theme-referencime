@@ -626,3 +626,17 @@ body.template-netlinking .entry-header {
   animation-delay: -5s;
   animation-duration: 20s;
 }
+
+/* -------------------------------------------------------------------------- */
+/*	7a. Template: Cover Template
+/* -------------------------------------------------------------------------- */
+
+.cover-header-inner-wrapper {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	/* justify-content: flex-end; */
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
