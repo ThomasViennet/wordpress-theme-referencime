@@ -158,6 +158,113 @@
 	</div><!-- .cover-header -->
 
 	<div class="post-inner" id="post-inner">
+	<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<nav id="course-timeline" class="timeline">
+<div class="timeline__inner">
+<span class="timeline__iconContainer">
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+<i class="icon-home roundIcon__icon"></i>
+</a>
+</span>
+<div class="timeline__steps">
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8056759-tirez-un-maximum-de-ce-cours" class="timeline__step timeline__step--completed" title="Tirez un maximum de ce cours">
+<span class="timeline__stepName">
+Tirez un maximum de ce cours
+</span>
+ </a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8056865-installez-wordpress" class="timeline__step timeline__step--completed" title="Installez WordPress">
+<span class="timeline__stepName">
+Installez WordPress
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8057030-creez-installez-et-parametrez-un-theme-enfant" class="timeline__step timeline__step--completed" title="Créez, installez et paramétrez un thème enfant">
+<span class="timeline__stepName">
+Créez, installez et paramétrez un thème enfant
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8057131-creez-une-page-d-accueil-grace-a-gutenberg" class="timeline__step timeline__step--completed" title="Créez une page d’accueil grâce à Gutenberg">
+<span class="timeline__stepName">
+Créez une page d’accueil grâce à Gutenberg
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/exercises/4744" class="timeline__step js-current-timeline-step" title="Quiz : Installer un thème enfant">
+<span class="timeline__stepName">
+Quiz : Installer un thème enfant
+</span>
+<span class="timeline__progressMarker"></span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8057489-personnalisez-le-template-du-theme-enfant" class="timeline__step timeline__step--completed" title="Personnalisez le template du thème enfant">
+ <span class="timeline__stepName">
+Personnalisez le template du thème enfant
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8057582-creez-un-template-de-page" class="timeline__step timeline__step--completed" title="Créez un template de page">
+<span class="timeline__stepName">
+Créez un template de page
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8057691-creez-des-articles-categorises" class="timeline__step timeline__step--completed" title="Créez des articles catégorisés">
+<span class="timeline__stepName">
+Créez des articles catégorisés
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8057883-modifiez-le-comportement-des-articles-avec-les-hooks" class="timeline__step timeline__step--completed" title="Modifiez le comportement des articles avec les hooks">
+<span class="timeline__stepName">
+Modifiez le comportement des articles avec les hooks
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/exercises/4745" class="timeline__step" title="Quiz : Enrichir un thème WordPress avec HTML, CSS et PHP">
+<span class="timeline__stepName">
+Quiz : Enrichir un thème WordPress avec HTML, CSS et PHP
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8058206-mettez-en-place-le-mode-debug-pour-analyser-une-erreur" class="timeline__step timeline__step--completed" title="Mettez en place le mode debug pour analyser une erreur">
+<span class="timeline__stepName">
+Mettez en place le mode debug pour analyser une erreur
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8058310-analysez-vos-requetes-avec-query-monitor" class="timeline__step timeline__step--completed" title="Analysez vos requêtes avec Query Monitor">
+<span class="timeline__stepName">
+Analysez vos requêtes avec Query Monitor
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8058393-gerez-un-plugin-corrompu-ou-bugge" class="timeline__step timeline__step--completed" title="Gérez un plugin corrompu ou buggé">
+<span class="timeline__stepName">
+Gérez un plugin corrompu ou buggé
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8058473-evitez-le-piratage-du-site" class="timeline__step timeline__step--completed" title="Évitez le piratage du site">
+<span class="timeline__stepName">
+Évitez le piratage du site
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/8058514-conclusion" class="timeline__step timeline__step--completed" title="Conclusion">
+<span class="timeline__stepName">
+Conclusion
+</span>
+</a>
+<a href="/fr/courses/7882631-allez-plus-loin-avec-wordpress/exercises/4746" class="timeline__step" title="Quiz : Débugger un site WordPress">
+<span class="timeline__stepName">
+Quiz : Débugger un site WordPress
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+</div>
+<span class="timeline__iconContainer">
+<a href="/fr/courses/7882631/certificate_example" title="Certificat de réussite (voir un exemple)" class="roundIcon timeline__roundIcon">
+<i class="icon-trophy roundIcon__icon"></i>
+</a>
+</span>
+</div>
+</nav>
+</div>
+</div>
+</div>
 		<div class="entry-content">
 
 			<?php

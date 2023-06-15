@@ -1,5 +1,5 @@
 <?php
-// enqueue scripts and style from parent theme
+// Enqueue scripts and style from parent theme
 add_action('wp_enqueue_scripts', 'theme_enqueue');
 function theme_enqueue()
 {
@@ -13,7 +13,7 @@ function theme_enqueue()
 	wp_enqueue_script('netlinking', get_stylesheet_directory_uri() . '/assets/js/netlinking.js', ['jquery'], filemtime(get_stylesheet_directory() . '/assets/js/netlinking.js'), true);
 }
 
-// add classes to body
+// Add classes to body
 add_filter('body_class', 'overlay_header');
 function overlay_header($classes)
 {
@@ -23,3 +23,33 @@ function overlay_header($classes)
 	}
 	return $classes;
 }
+
+//Customization of the login page
+function my_login_logo()
+{ ?>
+	<style type="text/css">
+		#login h1 a,
+		.login h1 a {
+			background-image: url(<?= get_stylesheet_directory_uri(); ?>/assets/img/logo-simple-referencime-nobords.png.webp);
+			height: 100px;
+			width: 100px;
+			background-size: 100px 100px;
+			background-repeat: no-repeat;
+			padding-bottom: 30px;
+		}
+	</style>
+<?php }
+add_action('login_enqueue_scripts', 'my_login_logo');
+
+function my_login_logo_url()
+{
+	return home_url();
+}
+add_filter('login_headerurl', 'my_login_logo_url');
+
+function my_login_logo_url_title()
+{
+	return 'Your Site Name and Info';
+}
+add_filter('login_headertext', 'my_login_logo_url_title');
+add_action('login_enqueue_scripts', 'theme_enqueue');
