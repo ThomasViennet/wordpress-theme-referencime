@@ -18,15 +18,21 @@ add_filter('body_class', 'overlay_header');
 function overlay_header($classes)
 {
 	// Check whether the current page should have an overlay header.
-	if (is_page_template(array('templates/template-waves.php', 'templates/template-netlinking.php'))) {
+	if (is_page_template(array('templates/template-waves.php'))) {
 		$classes[] = 'overlay-header';
 	}
 	return $classes;
 }
 
-//Customization of the login page
-function my_login_logo()
-{ ?>
+
+
+////Customization of the login page
+function edit_style_and_js()
+{
+	wp_enqueue_style('referencime', get_stylesheet_directory_uri() . '/style.css', false, null);
+
+?>
+
 	<style type="text/css">
 		#login h1 a,
 		.login h1 a {
@@ -37,9 +43,23 @@ function my_login_logo()
 			background-repeat: no-repeat;
 			padding-bottom: 30px;
 		}
+
+		.login form {
+			overflow: visible !important;
+			padding: 26px 24px 50px !important;
+		}
 	</style>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var loginForm = document.getElementById("loginform");
+			if (loginForm) {
+				loginForm.className += "background-animation";
+			}
+		});
+	</script>
 <?php }
-add_action('login_enqueue_scripts', 'my_login_logo');
+add_action('login_enqueue_scripts', 'edit_style_and_js');
 
 function my_login_logo_url()
 {
@@ -49,7 +69,6 @@ add_filter('login_headerurl', 'my_login_logo_url');
 
 function my_login_logo_url_title()
 {
-	return 'Your Site Name and Info';
+	return 'Référencime';
 }
 add_filter('login_headertext', 'my_login_logo_url_title');
-add_action('login_enqueue_scripts', 'theme_enqueue');
