@@ -31,6 +31,11 @@ License URL: https://www.gnu.org/licenses/gpl-2.0.html
 /*	CSS Reset
 /* -------------------------------------------------------------------------- */
 
+:root {
+  --main-color: #cd2753;
+  --secondary-color: #0A2463;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body * {
@@ -67,7 +72,7 @@ main p {
   display: inline-block;
   outline: none;
   border: none;
-  background: #cd2753;
+  background: var(--main-color);
   overflow: hidden;
 }
 
@@ -79,7 +84,7 @@ main p {
 .wp-block-button:hover,
 .cmplz-accept:hover {
   text-decoration: none;
-  color: #cd2753;
+  color: var(--main-color);
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   border: none !important;
@@ -95,7 +100,6 @@ main p {
   backdrop-filter: blur(10px) saturate(180%);
   transition: 0.2s linear;
 }
-
 
 /* Navigation ------------------------------------ */
 
@@ -129,26 +133,6 @@ main p {
   margin: auto !important;
 }
 
-/* header.entry-header {
-  animation: 1s disappearing;
-  transition: all 1s;
-}
-
-@keyframes disappearing {
-  from {
-    filter: blur(10rem);
-  }
-
-  to {
-    filter: blur(0rem);
-  }
-}
-
-header.entry-header.afterScroll {
-  filter: blur(10rem);
-  transition: all 1s;
-} */
-
 .site-logo.afterScroll {
   width: 50%;
   margin: auto !important;
@@ -157,31 +141,6 @@ header.entry-header.afterScroll {
 #wpadminbar {
   position: fixed;
 }
-
-/* .waves-nav {
-  display: none;
-}
-
-@media (min-width: 700px) {
-  .waves-nav {
-    display: block;
-    width: 100%;
-    height: 1vh;
-    opacity: 0;
-    top: -1vh;
-    position: absolute;
-  }
-
-  .waves-nav.afterScroll {
-    display: block;
-    width: 100%;
-    height: 1vh;
-    opacity: 0.8;
-    top: -1vh;
-    position: absolute;
-    backdrop-filter: blur(10px) saturate(180%);
-  }
-} */
 
 /* Form ------------------------------------ */
 
@@ -194,7 +153,7 @@ form {
 
 input[type=checkbox] {
   position: relative;
-  border: solid #0A2463 !important;
+  border: solid var(--secondary-color) !important;
   border-radius: 2px !important;
   margin: 0 1em 0 0 !important;
   padding: 0 !important;
