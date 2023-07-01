@@ -14,16 +14,16 @@ License URL: https://www.gnu.org/licenses/gpl-2.0.html
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 
-	CSS Reset
-    General
-    Navigation
-    Form
-  Custom styles
-  Plugin: Contact form 7
-  Plugin: kk star
-  Plugin: Yoast
-	Template: Waves Template
-  Template: Netlinking Template
+	- CSS Reset
+  -- General
+  -- Navigation
+  -- Form
+  - Custom styles
+  - Plugin: Contact form 7
+  - Plugin: kk star
+  - Plugin: Yoast
+	- Template: Waves Template
+  - Template: Netlinking Template
 
 ----------------------------------------------------------------------------- */
 
@@ -283,6 +283,65 @@ input[type=checkbox]:checked {
   100% {
     -webkit-transform: scale(50) rotate(45deg);
     opacity: 0;
+  }
+}
+
+/* div with background animation ------------------------------------ */
+
+.background-animation {
+  position: relative;
+  width: auto;
+  height: auto;
+  line-height: auto;
+  background-color: white;
+  animation: textColor 7s ease infinite;
+}
+
+.background-animation:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.75);
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+  background: linear-gradient(270deg, var(--secondary-color), var(--main-color));
+  background-size: 200% 200%;
+  animation: animateGlow 7s ease infinite;
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes textColor {
+  0% {
+    color: var(--main-color);
+  }
+
+  50% {
+    color: var(--secondary-color);
+  }
+
+  100% {
+    color: var(--main-color);
   }
 }
 
