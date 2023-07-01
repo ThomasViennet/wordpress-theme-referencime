@@ -24,8 +24,6 @@ function overlay_header($classes)
 	return $classes;
 }
 
-
-
 ////Customization of the login page
 function edit_style_and_js()
 {
