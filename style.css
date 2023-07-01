@@ -101,6 +101,10 @@ main p {
   transition: 0.2s linear;
 }
 
+.post-inner {
+  padding-bottom: 7em;
+}
+
 /* Navigation ------------------------------------ */
 
 #site-header,
