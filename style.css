@@ -129,7 +129,7 @@ main p {
   margin: auto !important;
 }
 
-header.entry-header {
+/* header.entry-header {
   animation: 1s disappearing;
   transition: all 1s;
 }
@@ -147,7 +147,7 @@ header.entry-header {
 header.entry-header.afterScroll {
   filter: blur(10rem);
   transition: all 1s;
-}
+} */
 
 .site-logo.afterScroll {
   width: 50%;
