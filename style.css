@@ -101,10 +101,6 @@ main p {
   transition: 0.2s linear;
 }
 
-.post-inner {
-  padding-bottom: 7em;
-}
-
 /* Navigation ------------------------------------ */
 
 #site-header,
@@ -176,6 +172,10 @@ input[type=checkbox]:checked {
 /* -------------------------------------------------------------------------- */
 /*	Custom styles (Occasionally useful)
 /* -------------------------------------------------------------------------- */
+
+.margin-top-7em {
+  margin-top: 7em !important;
+}
 
 .no-margin-top {
   margin-top: 0px !important;
