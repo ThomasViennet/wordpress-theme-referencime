@@ -33,7 +33,7 @@ License URL: https://www.gnu.org/licenses/gpl-2.0.html
 
 :root {
   --main-color: #cd2753;
-  --secondary-color: #0A2463;
+  --secondary-color: #222e5a;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -116,7 +116,7 @@ main p {
 }
 
 #site-header.afterScroll {
-  background-color: rgba(10, 36, 99, 0.8) !important;
+  background-color: rgba(34, 46, 90, 1) !important;
   backdrop-filter: blur(10px) saturate(180%);
 }
 
