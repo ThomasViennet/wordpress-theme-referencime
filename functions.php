@@ -27,7 +27,7 @@ function overlay_header($classes)
 ////Customization of the login page
 function edit_style_and_js()
 {
-	wp_enqueue_style('referencime', get_stylesheet_directory_uri() . '/style.css', false, null);
+	wp_enqueue_style('referencime', get_stylesheet_directory_uri() . '/assets/css/style.css', false, null);
 
 ?>
 
@@ -70,20 +70,3 @@ function my_login_logo_url_title()
 	return 'Référencime';
 }
 add_filter('login_headertext', 'my_login_logo_url_title');
-
-function custom_theme_colors() {
-    // Création d'une nouvelle palette de couleurs
-    $colors = array(
-        array(
-            'name'  => __( 'Custom Color', 'twentytwenty' ),
-            'slug'  => 'custom-color',
-            'color' => '#123456', // Votre couleur en hexadécimal
-        ),
-        // Ajoutez plus de couleurs ici si vous le souhaitez...
-    );
-
-    // Ajout de la palette de couleurs au thème
-    add_theme_support( 'editor-color-palette', $colors );
-}
-
-add_action( 'after_setup_theme', 'custom_theme_colors' );
