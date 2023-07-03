@@ -296,7 +296,7 @@ input[type=checkbox]:checked {
 
 /* div with background animation ------------------------------------ */
 
-.background-animation {
+.background-animation, form {
   position: relative;
   width: auto;
   height: auto;
@@ -305,7 +305,7 @@ input[type=checkbox]:checked {
   animation: textColor 7s ease infinite;
 }
 
-.background-animation:after {
+.background-animation:after, form:after {
   position: absolute;
   content: "";
   top: 0;
