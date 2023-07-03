@@ -22,14 +22,14 @@
 			<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
 		</defs>
 		<g class="parallax">
-			<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7"></use>
-			<use xlink:href="#gentle-wave" x="48" y="1" fill="rgb(0,0,0)"></use>
-			<use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(0,0,0,0.3)"></use>
-			<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)"></use>
-			<use xlink:href="#gentle-wave" x="48" y="4" fill="rgb(0,0,0)"></use>
-			<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)"></use>
-			<use xlink:href="#gentle-wave" x="48" y="6" fill="rgba(0,0,0,0.7"></use>
-			<use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(0,0,0)"></use>
+			<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(10,36,99,0.7"></use>
+			// <use xlink:href="#gentle-wave" x="48" y="1" fill="rgb(10,36,99)"></use>
+			<use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(10,36,99,0.3)"></use>
+			<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(10,36,99,0.5)"></use>
+			// <use xlink:href="#gentle-wave" x="48" y="4" fill="rgb(10,36,99)"></use>
+			<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(10,36,99,0.3)"></use>
+			<use xlink:href="#gentle-wave" x="48" y="6" fill="rgba(10,36,99,0.7"></use>
+			// <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(10,36,99)"></use>
 		</g>
 	</svg>';
 	}

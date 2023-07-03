@@ -76,7 +76,7 @@
       options = options !== undefined ? options : {};
       this.options = {
         particleColor: (options.particleColor !== undefined) ? options.particleColor : '#fff',
-        background: (options.background !== undefined) ? options.background : '#000',
+        background: (options.background !== undefined) ? options.background : '#0A2463',
         interactive: (options.interactive !== undefined) ? options.interactive : true,
         velocity: this.setVelocity(options.speed),
         density: this.setDensity(options.density)
@@ -278,7 +278,7 @@
   
 		var canvasDiv = document.getElementById('site-footer');
 		var options = {
-			particleColor: '#e32657',
+			particleColor: '#fff',
 			interactive: true,
 			speed: 'slow',
 			density: 'high'

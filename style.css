@@ -116,7 +116,7 @@ main p {
 }
 
 #site-header.afterScroll {
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  background-color: rgba(10, 36, 99, 0.8) !important;
   backdrop-filter: blur(10px) saturate(180%);
 }
 
