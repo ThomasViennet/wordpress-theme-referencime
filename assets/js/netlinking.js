@@ -134,7 +134,8 @@
         'z-index': '0',
         'position': 'absolute',
         'top':'0',
-        'bottom':'0'
+        'bottom':'0',
+        'box-shadow': 'inset 0em 1em 1em #222e5a'
       });
   
       // Add resize listener to canvas
@@ -279,7 +280,7 @@
 		var canvasDiv = document.getElementById('site-footer');
 		var options = {
 			particleColor: '#fff',
-			interactive: true,
+			interactive: false,
 			speed: 'slow',
 			density: 'high'
 		};
