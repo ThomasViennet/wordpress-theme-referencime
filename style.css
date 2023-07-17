@@ -5,7 +5,7 @@ Description: Twenty Twenty Child Theme
 Author: Thomas Viennet
 Author URL: https://referencime.fr/consultant-seo-freelance/
 Template: twentytwenty
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URL: https://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -159,6 +159,9 @@ input[type=checkbox]:checked {
 }
 .no-padding-left {
   padding-left: 0px !important;
+}
+.no-padding {
+  padding: 0px !important;
 }
 .padding,
 .about {
