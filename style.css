@@ -89,6 +89,13 @@ main p {
   backdrop-filter: blur(10px) saturate(180%);
   transition: 0.2s linear;
 }
+.menu-modal-inner {
+  background-color: rgba(34, 46, 90, 0.4);
+  backdrop-filter: blur(10px) saturate(180%);
+}
+.modal-menu a {
+  color: white;
+}
 /* Navigation ------------------------------------ */
 #site-header,
 .header-inner,
