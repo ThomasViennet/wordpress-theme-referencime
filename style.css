@@ -304,6 +304,9 @@ input[type=checkbox]:checked {
   display: block;
   margin-top: 10px;
 }
+.grecaptcha-badge {
+  visibility: hidden;
+}
 /* -------------------------------------------------------------------------- */
 /*	Plugin: kk star
 /* -------------------------------------------------------------------------- */
