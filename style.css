@@ -102,6 +102,9 @@ main p {
 .modal-menu a {
   color: white !important;
 }
+.has-background-dim {
+  background-color: #222e5a !important;
+}
 /* Navigation ------------------------------------ */
 #site-header,
 .header-inner,
