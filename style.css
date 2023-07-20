@@ -105,6 +105,10 @@ main p {
 .has-background-dim {
   background-color: #222e5a !important;
 }
+.wp-block-table thead {
+  background-color: #222e5a;
+  color: white;
+}
 /* Navigation ------------------------------------ */
 #site-header,
 .header-inner,
