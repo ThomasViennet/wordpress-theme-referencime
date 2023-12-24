@@ -70,3 +70,15 @@ function my_login_logo_url_title()
 	return 'Référencime';
 }
 add_filter('login_headertext', 'my_login_logo_url_title');
+
+//shortcode to add informations about author and last update
+require_once('controllers/credit.php');
+use Referencime\Controllers\Credit\Controller_Credit;
+
+add_shortcode('credit', 'credit');
+function credit()
+{
+    ob_start();
+	Controller_Credit::displayCredit();
+    return ob_get_clean();
+}
